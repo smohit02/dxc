@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, 
+        shrink-to-fit=no">
+         <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<title>Datasheet Entry</title>
+
+<script type="text/javascript">
+    function display(){
+            var table=document.getElementById("table");
+            var a=document.getElementById("item").value;
+            var b=document.getElementById("qty").value;
+            var c=document.getElementById("rate").value;
+            var d=b*c;
+            var row = table.insertRow(0);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(0);
+            var cell3 = row.insertCell(0);
+            var cell4 = row.insertCell(0);
+            cell1.innerHTML = a;
+            //cell2.innerHTML = b;
+            cell3.innerHTML = c;
+            cell4.innerHTML = d;
+}
+
+</script>
+</head>
+<body>
+    <h1 style="text-align: center">Sample Form</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <form>
+                    <label style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Sl. No.</label>
+                    <input type="number" required name="index">
+                    <br/>
+                    <label style="padding-top: 2%;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Description</label>
+                    <input style="margin-top: 2%" type="text" id="item">
+                    <br/>
+                    <label style="padding-top: 2%; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Quantity</label>
+                    <input style="margin-top: 2%" type="number" id="qty">
+                    <br/>
+                    <label style="padding-top: 2%; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Rate</label>
+                    <input style="margin-top: 2%" type="number" id="rate">
+                    <br/>
+                    <button style="margin-top: 10px; margin-left: 5%" type="button" onclick="display()">Submit</button><br/>
+                    <button style="margin-top: 5px; margin-left: 5%" type="button">View Invoice</button> 
+                </form>
+            </div>
+            <div class="col-md-4">
+                <table style="width: 100%;border: 10pt" id="table">
+                    <tr>Description</tr>
+                    <tr>Qty</tr>
+                    <tr>Rate</tr>
+                    <tr>Total Amount</tr>
+
+                
+    
+                </table>
+                <!--<table style="width: 100%;border: 10pt">
+                    <tr>
+                        <td><span id="cell1"></span></td>
+                        <td><span id="cell2"></span></td>
+                    </tr>
+                </table> -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

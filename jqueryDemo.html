@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script SRC="js/jquery-3.4.1.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("button#b1").click(function(){
+                    $("p").toggle();
+                })
+                
+                $("button#b2").click(function(){
+                    alert("Hello from button 2")
+                })
+
+                $("p#magic").click(function(){
+                    $(this).hide();
+                })
+            })    
+        </script>
+    </head>
+    <body>
+
+        <p>My Para 1</p>
+        <p>My Para 2</p>
+        <p id="magic">Click me for magic</p>
+
+        <button id="b1">Go 1</button>
+        <button id="b2">Go 2</button>
+
+    </body>
+
+</html>

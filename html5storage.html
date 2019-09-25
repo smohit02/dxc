@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script type="text/javascript">
+        function setCurrCity(){
+            var cityName=document.getElementById("cityName").value;
+            localStorage.setItem("cname",cityName)
+        }
+
+        function setCity(){
+            if (localStorage.cname){
+                document.f1.cityName.value = localStorage["cname"];
+            }
+        }
+        </script>
+    </head>
+
+    <body onload = "setCity()">
+        <form name="f1">
+            City Name : <input type="text" id="cityName" name="cityName">
+            <input type="button" value="Set" onclick="setCurrCity()">
+        </form>
+    
+    </body>
+</html>

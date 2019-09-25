@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <script type="text/javascript">
+
+
+            function addNum()
+            {
+
+                    var result = confirm ("Do you want to continue?")
+                    if(result == true)
+                    {
+                    var a = prompt("Enter first no. :");
+                    var b = prompt("Enter second no. :" );
+                    var c = parseInt(a)+parseInt(b);
+                    alert(a+"+"+b+"="+c);
+                    alert(` ${a} + ${b} = ${c}`);
+                    }
+                    else
+                    alert("Get Lost.");
+              }   
+
+              function dispMsg()
+                {
+                    alert("AHAM BRAMHASMI!");
+                }
+
+
+                function dispMsg1()
+                {
+                    var d= new Date();
+
+                    if(d.getHours() >= 12)
+                    {alert("Good Afternoon");}
+
+                    else if(d.getHours() < 18)
+                    {alert("Good Evening");}
+
+                    else
+                    {alert("Good Morning");}
+                }
+
+
+                function roomTemp()
+                {
+                    temp=3;
+                    return temp;
+                }
+
+                function dispTempStatus()
+                {
+                    t = roomTemp();
+                    if(t>30){
+                    alert("Too Hot");
+                    }
+
+                    else{
+                    alert("Too Cold")
+                    }
+                }
+
+
+        </script>
+
+        <body>
+                <br/>
+                <input type="button" value="Add Numbers" onclick="addNum()"><br/><br/>
+                <input type="button" value="A Message" onclick="dispMsg()"><br/><br/>
+                <input type="button" value="Greetings" onclick="dispMsg1()"><br/><br/>
+                <input type="button" value="Temperature Status" onclick="dispTempStatus()"><br/><br/>
+
+
+
+
+        </body>
+
+    </head>
+</html>

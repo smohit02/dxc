@@ -1,0 +1,163 @@
+<html>
+        <head>
+            <title>Welcome to DXC</title>
+
+            <script type="text/javascript">
+                function check()
+                {
+                    
+                    var data = document.getElementById("qualification").value;
+                    var username = document.getElementById("username").value;
+                    var password = document.getElementById("password").value;
+                    var confirmpassword = document.getElementById("confirmpassword").value;
+                    var fullName = document.getElementById("fullName").value;
+                    var qualification = document.getElementById("qualification").value;
+                    var gender = document.getElementById("gender").value;
+
+                    var s1 = document.getElementById("s1")
+                    var s2 = document.getElementById("s2")
+                    var s3 = document.getElementById("s3")
+                    var s4 = document.getElementById("s4")
+                    var s5 = document.getElementById("s5")
+                    var s6 = document.getElementById("s6")
+                    var s7 = document.getElementById("s7")
+
+
+                    s1.innerHTML = " "
+                    s2.innerHTML = " "
+                    s3.innerHTML = " "
+                    s4.innerHTML = " "
+                    s5.innerHTML = " "
+                    s6.innerHTML = " "
+                    s7.innerHTML = " "
+
+                    if(username == "")
+                    {
+                        s1.innerHTML = "Please enter the username"
+                        return false;
+                    }
+
+                    if(password == "")
+                    {
+                        s2.innerHTML = "Please enter the password"
+                        return false;
+                    }
+
+                    if(password != confirmpassword)
+                    {
+                        s3.innerHTML = "Passwords do not match"
+                        return false;
+                    }
+
+                    if(fullName == "")
+                    {
+                        s4.innerHTML = "Please enter the full name"
+                        return false;
+                    }
+
+
+                    if((gender[0].checked) == false && (gender[1].checked) == false && (gender[2].checked) == false)
+                    {
+                        s5.innerHTML = "Please select your gender"
+                        return false;
+                    }  
+
+                    if(qualification == "----")
+                    {
+                        s6.innerHTML = "Please select a qualification"
+                        return false;
+                    }                
+
+
+                    var a = false
+                    for(i = 0; i < 3; i++)
+                    {
+                        if(alertBy[i].checked == true)
+                        a=true;
+                        break;
+                    }
+                    
+                    if(a == false)
+                    {
+                        s7.innerHTML = "Please select atleast one alert method"
+                        return false;
+                    }
+
+
+                }
+            
+            </script>
+        </head>
+    
+    <body>
+    
+        <h2>
+            <center>Registration Form</center>
+        </h2>
+
+
+    <form action="success.html" onsubmit="return check()">
+
+
+        <table cellspacing="10" cellpadding="10" align="center">
+
+
+            <tr><td>User Name *</td><td><input type="text" name="username" id="username"/></td>
+                <td><span id="s1"> </span></td></tr>
+
+            <tr><td>Password *</td><td><input type="Password" name="password" id="password"/></td>
+                <td><span id="s2"> </span></td></tr>
+
+            <tr><td>Confirm Password *</td><td><input type="Password" name="confirmpassword" id="confirmpassword"/></td>
+                <td><span id="s3"> </span></td></tr>
+
+            <tr><td>Full Name *</td><td><input type="text" name="fullName" id="fullName"/></td>
+                <td><span id="s4"> </span> </td></tr>
+
+
+            <tr>
+             <td>Gender *</td>
+                <td>
+                    <input type="radio" name="gender" id="gender" value="Male" />Male
+                    <input type="radio" name="gender" id="gender" value="Female"/>Female
+                    <input type="radio" name="gender" id="gender" value="Others"/>Others
+                </td>
+                <td><span id="s5"> </span></td>
+            </tr>
+
+            <tr>
+              <td>Qualification *</td>
+                <td>
+                    <select name="qualification" id="qualification">
+                        <option value="----">Select Option</option>
+                        <option value="MCA">MCA</option>
+                        <option value="MBA">MBA</option>
+                        <option value="MTech">MTech</option>
+
+                    </select>
+                </td>
+                <td><span id="s6"> </span></td>
+            </tr>
+
+            <tr>
+                <td>Alert By * :</td>
+                 <td>
+                    <input type="checkbox" name="alertBy" id="alertBy" value="mobile"/>Mobile
+                    <input type="checkbox" name="alertBy" id="alertBy" value="email"/>Email
+                    <input type="checkbox" name="alertBy" id="alertBy" value="letters"/>Letters
+                 </td>
+                    <td><span id="s7"> </span></td>
+            </tr>
+            
+            <tr>
+                <td align="center">
+                    <input type="submit" value="Register" onclick="check()"/></td>
+                <td align="center">
+                    <input type="reset" value="Clear"/></td>
+            </tr>
+
+        </table>
+
+    </form>
+    </body>
+    </html>

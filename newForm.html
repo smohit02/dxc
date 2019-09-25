@@ -1,0 +1,71 @@
+<html>
+    <head>
+
+           <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        
+        <script type="text/javascript">
+            function check()
+                {
+                    var uname = document.getElementById("username").value;
+                    var pass = document.getElementById("password").value;
+
+                    var u = document.getElementById("uname");
+                    var p = document.getElementById("pass");
+
+                    var passw = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+                    
+
+                        if(uname.length == 0)                
+                            {
+                                u.innerHTML = "<font color=red>Username is Mandatory</font>"
+                                //alert("Please enter your username");
+                            }
+
+                        else
+                        {
+                            u.innerHTML = ""
+                        }                            
+                                                      
+
+                        if (pass.length == 0)
+                            {
+                                p.innerHTML = "<font color=red>Password is Mandatory</font>"
+                                //alert("Please enter your password");
+                            }
+
+                        else if(pass.length < 6 || pass.length > 12)
+                            {
+                                p.innerHTML = "<font color=red>Password length should minimum 6 and maximum 12 characters</font>"
+                            }
+
+                        else if(pass.charAt(0) != "A")
+                            {
+                                p.innerHTML = "<font color=red>Password should begin with A</font>"
+                            }
+                        else
+                            {  
+                                alert("Welcome "+uname)
+
+                                 p.innerHTML = ""
+                            }
+                }     
+
+        </script>
+    </head>
+
+
+    <body>
+
+        <form>
+
+            Username: <input type="text" name="username" id="username"><span id=uname></span>  <br/><br/>
+            Password: <input type="password" name="password" id="password"><span id=pass></span>
+
+            <br/>
+            
+            <input type="button" value="Login" onclick="check()">
+
+        </form>
+    </body>
+</html>

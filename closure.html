@@ -1,0 +1,22 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script type=text/javascript>
+        function one(outer_arg){
+            function inner(inner_arg)
+            {
+                return outer_arg + inner_arg;
+            }
+            return inner;
+        }
+        var a = one(5);
+        console.log(a(4));
+        console.log(a(4));
+        console.dir(a);
+    </script>
+</head>
+
+</html>

@@ -1,0 +1,43 @@
+<html>
+        <head>
+            <title>Welcome to DXC</title>
+
+            <script type="text/javascript">
+            
+                    function check() {
+
+                    var username = document.getElementById("uname").value;
+                    var validcharacters = '1234567890-_.abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+                    for (var i = 0, l = username.length; i < l; ++i) {
+                    if (validcharacters.indexOf(username.substr(i, 1)) == -1) {
+                    return false;
+
+                    }           
+                    return true;
+                    }
+                    }
+            
+            
+            </script>
+        </head>
+    
+    <body>
+    
+        <h2>
+            <center>Login Form</center>
+        </h2>
+    <form>
+        <table cellspacing="10" cellpadding="10" align="center">
+            <tr><td>User Name</td><td><input type="text" name="username" id="username"/></td></tr>
+            <tr><td>Password</td><td><input type="Password" name="password" id="password"/></td></tr>
+            
+            <tr><td align="center">
+                    <input type="submit" value="Go" onclick="check()"></td>
+                <td align="center">
+                    <input type="reset" value="Clear"></td>
+            </tr>
+        </table>
+    </form>
+    </body>
+    </html>

@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script type="text/javascript">
+        
+        var billAmt;
+        var c = new Date;
+
+        var billAmt =parseInt(prompt("Enter bill amount :"));
+        var day=c.getDate();
+        if(day > 15)
+        {
+        var fine= (day-15) * 50;
+        var total = fine + billAmt;
+        alert("The bill amt is :" +total);
+        }
+
+        else
+        alert("The bill amount is :" +billAmt);
+                
+        </script>
+    </head>
+</html>

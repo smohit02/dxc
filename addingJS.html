@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function check()
+                {
+                    var num1 = document.getElementById("n1").value
+                    var num2 = document.getElementById("n2").value
+
+
+                    var s1 = document.getElementById("s1")
+                    //s1.innerText = "<font color=red>Enter number 1</font>"
+
+
+                    var s2= document.getElementById("s2")
+                    //s2.innerHTML = "<font color=red>Enter number 2</font>"
+
+                    var resultDiv = document.getElementById("resultDiv")
+
+
+                    if(n1 == null )                
+                    {
+                        //alert("Please enter both the numbers correctly");
+                        auth(s1)
+                        
+                    }
+
+                    else if(n2 == null )
+                    {
+                        auth(s2)
+                    }
+
+                    else
+
+                    {
+                        var sum = parseInt(num1) + parseInt(num2)
+                        alert("The sum is : " +sum);
+                       // resultDiv.innerHTML = "<font color=green>The sum is : <\font>"
+                    }
+           
+
+
+
+                }
+
+
+                function auth(v)
+                {
+
+                    alert("auth called")
+                    v.innerHTML = "<font color=red>Enter number</font>"
+                    
+
+                }
+
+        </script>
+    </head>
+
+
+    <body>
+
+        <form>
+
+            Number 1: <input type="text" name="num1" id="n1"><span id="s1"></span>
+            <br/>
+            Number 2: <input type="text" name="num2" id="n2"><span id="s2"></span>
+            <br/>
+            
+            <input type="button" value="Add" onclick="check()">
+            <input value="Reset" type="reset">
+
+        </form>
+    </body>
+</html>
